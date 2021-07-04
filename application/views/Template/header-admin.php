@@ -37,7 +37,7 @@
             <a class="nav-link" href="<?php echo site_url('Kendaraanserver');?>">Kendaraan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('InfoUmum');?>">Halaman update</a>
+            <a class="nav-link" href="<?php echo site_url('InfoUmum');?>">Update Info</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('Krisar_admin');?>">Kritik dan Saran</a>

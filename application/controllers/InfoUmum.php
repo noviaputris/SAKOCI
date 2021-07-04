@@ -25,9 +25,5 @@ class InfoUmum extends CI_Controller{
             redirect(site_url("InfoUmum/update/$id")); 
         }        
     }
-    public function hapus($id){
-        $this->JadwalModel->deleteJadwal($id);
-        redirect(site_url("InfoUmum"));
-    } 
 }
 ?>

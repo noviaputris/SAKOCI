@@ -36,8 +36,6 @@
   <script src="<?php echo base_url('assets/lib/owlcarousel/owl.carousel.min.js')?>"></script>
   <script src="<?php echo base_url('assets/lib/lightbox/js/lightbox.min.js')?>"></script>
   <script src="<?php echo base_url('assets/lib/typed/typed.min.js')?>"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="<?php echo base_url('assets/contactform/contactform.js')?>"></script>
   <script src="<?php echo base_url('assets/js/main.js')?>"></script>
 

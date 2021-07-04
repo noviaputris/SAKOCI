@@ -46,19 +46,9 @@
 		            	<label class="label" for="password">Konfirmasi Password</label>
 		              <input type="password" name= "confirm_pass" class="form-control" placeholder="Konfirmasi Password" required>
 		            </div>
+					<?php echo $this->session->userdata("error"); ?>
 		            <div class="form-group">
 		            	<button type="submit" class="form-control btn btn-primary submit px-3">Daftar</button>
-		            </div>
-		            <div class="form-group d-md-flex">
-		            	<div class="w-50 text-left">
-			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
-									  <input type="checkbox" checked>
-									  <span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="w-50 text-md-right">
-										<a href="#">Forgot Password</a>
-									</div>
 		            </div>
 		          </form>
 		        </div>

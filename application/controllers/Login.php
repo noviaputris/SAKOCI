@@ -8,7 +8,6 @@ class Login extends CI_Controller{
 
     public function index(){
         if($this->session->userdata('logins')){
-            $data['judul'] = 'Admin Side';
             redirect(site_url("Kendaraanserver"));
         }else{
             $this->load->view("login");
@@ -24,7 +23,6 @@ class Login extends CI_Controller{
             );        
             $this->session->set_userdata($session_data); 
             redirect(site_url("Kendaraanserver"));
-            //echo $this->AdminModel->login()->num_rows();
         }else{
             $this->session->set_flashdata("error","Username atau Password Salah");
             redirect(site_url("Home/login"));
@@ -33,16 +31,22 @@ class Login extends CI_Controller{
 
     function prosesDaftar(){       
         $this->load->model("AdminModel","",TRUE);
-        $admin = array(
-            "username" => $this->input->post("username"),
-            "password" => $this->input->post("confirm_pass")
-        );
-
-        if($this->AdminModel->insertAdmin($admin)){
-            redirect(site_url("Login"));
+        if($this->input->post("password")==$this->input->post("confirm_pass")){
+            $admin = array(
+                "username" => $this->input->post("username"),
+                "password" => $this->input->post("confirm_pass")
+            );
+    
+            if($this->AdminModel->insertAdmin($admin)){
+                redirect(site_url("Login"));
+            }else{
+                redirect(site_url("Home/daftar"));
+            }
         }else{
+            $this->session->set_flashdata("error","Password tidak cocok");
             redirect(site_url("Home/daftar"));
         }
+        
     }
 
     
